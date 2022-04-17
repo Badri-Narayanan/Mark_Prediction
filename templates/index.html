@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Home Page</title>
+</head>
+<body>
+    {% if admin_page %}
+        <h1>Welcome to {{admin_name}}'s Home Page</h1>
+
+        <h3><u>Mark Predictor</u></h3>
+        <div>
+            <form action="/" method="POST">
+                <div>
+                    <label for="study_hrs">Enter Study Time in hrs (0-24):</label>
+                    <input type="number" name="study_hrs" id = "study_hrs" min="0" max="24">
+                </div>
+
+                <button type="submit">Predict</button>
+            </form>
+        </div>
+    {% else %}
+        <h1>Your Predicted Mark for the time spent is {{predicted_mark}}</h1>
+    {% endif%}
+
+<!--    <div>-->
+<!--        <form action="/send_data" method="POST" enctype="multipart/form-data">-->
+<!--            <div>-->
+<!--                <label for="num1">Value 1:</label>-->
+<!--                <input type="number" name="num1" id = "num1" placeholder="Enter the value of num1">-->
+<!--            </div>-->
+<!--            <br>-->
+<!--            <div>-->
+<!--                <label for="num2">Value 2:</label>-->
+<!--                <input type="number" name="num2" id="num2" placeholder="Enter the value of num2">-->
+<!--            </div>-->
+<!--            <br>-->
+<!--            <div>-->
+<!--                <label for="option">Enter The Option:</label>-->
+<!--                <input type="text" name="option" id="option" placeholder="(add/sub/mul/div/pow)">-->
+<!--            </div>-->
+<!--            <br>-->
+<!--            <div>-->
+<!--                <label for="userfile">Upload the file needed:</label>-->
+<!--                <input type="file" name="userfile" id="userfile">-->
+<!--            </div>-->
+<!--            <br>-->
+<!--            <button type="reset">Reset Data</button>&nbsp; &nbsp;-->
+<!--            <button type="submit">Send Data</button>-->
+<!--        </form>-->
+<!--    </div>-->
+
+
+</body>
+</html>
